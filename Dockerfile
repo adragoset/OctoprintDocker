@@ -24,9 +24,11 @@ git clone --branch ${OCTOPRINT_VERSION} https://github.com/foosel/OctoPrint.git 
 virtualenv --python=python2.7 stable && \
 ./stable/bin/pip install .
 
+USER root
 COPY start.sh .
 RUN chmod +x start.sh
 
+USER octoprint
 EXPOSE 5000
 VOLUME /home/octoprint/
 ENTRYPOINT ["start.sh"]
