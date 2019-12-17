@@ -19,4 +19,4 @@ ln -s /opt/vc/bin/dtoverlay-post /usr/bin/dtoverlay-post
 ln -s /opt/vc/bin/dtoverlay /usr/bin/dtoverlay
 ln -s /opt/vc/bin/dtparam /usr/bin/dtparam
 
-/opt/octoprint/stable/bin/octoprint serve --iknowwhatimdoing --basedir /home/octoprint/.octoprint
+/opt/octoprint/stable/bin/octoprint serve --iknowwhatimdoing
