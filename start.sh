@@ -19,4 +19,4 @@ ln -s /opt/vc/bin/vchiq_test /usr/bin/vchiq_test
 #ln -s /opt/vc/bin/dtoverlay /usr/bin/dtoverlay
 #ln -s /opt/vc/bin/dtparam /usr/bin/dtparam
 
-/opt/octoprint/stable/bin/octoprint serve --iknowwhatimdoing
+#/opt/octoprint/stable/bin/octoprint serve --iknowwhatimdoing
