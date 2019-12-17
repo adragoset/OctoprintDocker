@@ -28,7 +28,6 @@ USER root
 COPY start.sh .
 RUN chmod +x start.sh
 
-USER octoprint
 EXPOSE 5000
 VOLUME /home/octoprint/
 ENTRYPOINT ["start.sh"]
