@@ -10,8 +10,9 @@ cd stable && \
 git checkout tags/${OCTOPRINT_VERSION} && \
 virtualenv --python=python2.7 stable && \
 ./stable/bin/pip install . && \
-mkdir -p /octoprint/data
+cd / && \
+mkdir /octoprint
 
 WORKDIR /stable
-VOLUME ["/octoprint/data"]
-ENTRYPOINT [ "octoprint serve --basedir /octoprint/data" ]
+VOLUME ["/octoprint"]
+ENTRYPOINT [ "octoprint serve --basedir /octoprint" ]
