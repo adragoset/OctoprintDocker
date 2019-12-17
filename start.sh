@@ -1,3 +1,4 @@
+#!/bin/bash
 # Load shared libraries from /opt/vc/lib
 echo /opt/vc/lib > /etc/ld.so.conf.d/00-vmcs.conf
 ldconfig
