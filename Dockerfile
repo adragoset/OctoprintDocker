@@ -4,7 +4,7 @@ WORKDIR /opt/octoprint
 
 ##Install dependencies and tools
 RUN apt-get update && \
-apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev && \
+apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libraspberrypi-bin && \
 pip install --upgrade pip && \
 pip install virtualenv platformio && \
 apt-get install git
