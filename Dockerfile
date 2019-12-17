@@ -11,10 +11,6 @@ pip install --upgrade pip && \
 pip install virtualenv platformio && \
 apt-get install git
 
-#Create an octoprint user
-RUN useradd -ms /bin/bash -u ${USERID} octoprint && adduser octoprint dialout && \
-usermod -aG video,plugdev octoprint
-
 #Install octoprint
 RUN mkdir -p /home/octoprint/.octoprint && \
 git clone --branch ${OCTOPRINT_VERSION} https://github.com/foosel/OctoPrint.git /opt/octoprint && \
