@@ -10,7 +10,7 @@ pip install virtualenv platformio && \
 apt-get install git
 
 #Create an octoprint user
-RUN useradd -ms /bin/bash octoprint && adduser octoprint dialout && \
+RUN useradd -ms /bin/bash octoprint && adduser octoprint dialout video i2c spi gpio plugdev && \
 chown octoprint:octoprint /opt/octoprint
 USER octoprint
 
