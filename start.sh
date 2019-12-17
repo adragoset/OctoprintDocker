@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash:
 # Load shared libraries from /opt/vc/lib
 echo /opt/vc/lib > /etc/ld.so.conf.d/00-vmcs.conf
 ldconfig
@@ -19,4 +19,4 @@ ln -s /opt/vc/bin/dtoverlay-post /usr/bin/dtoverlay-post
 ln -s /opt/vc/bin/dtoverlay /usr/bin/dtoverlay
 ln -s /opt/vc/bin/dtparam /usr/bin/dtparam
 
-/opt/octoprint/stable/bin/octoprint serve --basedir /home/octoprint/.octoprint
+/opt/octoprint/stable/bin/octoprint serve --basedir /home/octoprint/.octoprint --iknowwhatimdoing
