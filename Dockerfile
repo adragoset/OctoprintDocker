@@ -11,7 +11,7 @@ apt-get install git
 
 #Create an octoprint user
 RUN useradd -ms /bin/bash octoprint && adduser octoprint dialout && \
-usermod -aG video,i2c,spi,gpio,plugdev octoprint && \
+usermod -aG video,plugdev octoprint && \
 chown octoprint:octoprint /opt/octoprint
 
 USER octoprint
