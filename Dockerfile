@@ -1,6 +1,6 @@
 FROM resin/raspberry-pi-python:2.7-slim
-ENV OCTOPRINT_VERSION 1.3.12 \
-USERID 1001
+ENV OCTOPRINT_VERSION=1.3.12 \
+USERID=1001
 WORKDIR /opt/octoprint
 
 ##Install dependencies and tools
@@ -11,7 +11,7 @@ pip install virtualenv platformio && \
 apt-get install git
 
 #Create an octoprint user
-RUN useradd -ms /bin/bash -u $USERID octoprint && adduser octoprint dialout && \
+RUN useradd -ms /bin/bash -u ${USERID} octoprint && adduser octoprint dialout && \
 usermod -aG video,plugdev octoprint && \
 chown octoprint:octoprint /opt/octoprint
 
