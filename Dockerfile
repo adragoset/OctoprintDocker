@@ -13,10 +13,7 @@ apt-get install git
 
 #Create an octoprint user
 RUN useradd -ms /bin/bash -u ${USERID} octoprint && adduser octoprint dialout && \
-usermod -aG video,plugdev octoprint && \
-chown octoprint:octoprint /opt/octoprint
-
-USER octoprint
+usermod -aG video,plugdev octoprint
 
 #Install octoprint
 RUN mkdir -p /home/octoprint/.octoprint && \
@@ -24,7 +21,7 @@ git clone --branch ${OCTOPRINT_VERSION} https://github.com/foosel/OctoPrint.git 
 virtualenv --python=python2.7 stable && \
 ./stable/bin/pip install .
 
-USER root
+
 COPY start.sh .
 RUN chmod +x start.sh
 
