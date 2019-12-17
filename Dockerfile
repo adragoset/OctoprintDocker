@@ -20,5 +20,5 @@ git clone --branch ${OCTOPRINT_VERSION} https://github.com/foosel/OctoPrint.git 
 virtualenv --python=python2.7 stable && \
 ./stable/bin/pip install .
 
-VOLUME /home/octoprint/.octoprint
+VOLUME /home/octoprint/
 CMD ["/opt/octoprint/stable/bin/octoprint", "serve"]
