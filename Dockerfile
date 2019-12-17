@@ -23,4 +23,4 @@ RUN chmod +x start.sh
 
 EXPOSE 5000
 VOLUME /home/octoprint/
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["/opt/octoprint/start.sh"]
