@@ -1,4 +1,4 @@
-FROM arm64v8/python:2.7-buster
+FROM resin/raspberry-pi-python:2.7-slim
 ENV OCTOPRINT_VERSION 1.3.12
 RUN apt-get update && \
 pip install virtualenv && \
@@ -10,5 +10,4 @@ virtualenv --python=python2.7 venv && \
 ./venv/bin/pip install . 
 
 VOLUME ["/.octoprint"]
-
 ENTRYPOINT [ "/OctoPrint/venv/bin/octoprint" ]
